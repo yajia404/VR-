@@ -1,0 +1,117 @@
+@charset "UTF-8";
+html,body,.wrapper{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+/* 侧边栏 */
+.l-sidebar{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:265px;
+    background:#3d485d;
+}
+
+/* logo */
+.vr-logo-box{
+    height:64px;
+    background-image: url("../images/logo_bg.png");
+    background-repeat: repeat-y;
+}
+.vr-logo{
+    display:block;
+    height:100%;
+    background: url("../images/logo.png") no-repeat 50% 50%;
+}
+
+/* 课程列表 */
+.vr-courses-title{
+    height:49px;
+    background:#354052;
+    line-height: 49px;
+    text-align: center;
+    font-size: 16px;
+    color: #f2f2f2;
+}
+.vr-courses-list li{
+    height:58px;
+    position: relative;
+    cursor:pointer;
+}
+.vr-courses-item{
+    position: relative;
+    padding-left: 58px;
+    line-height: 58px;
+    color: #a4afc3;
+    background:url("../images/icon_class_nor.png") no-repeat 28px 3px;
+}
+/* 鼠标悬停 */
+.vr-courses-list li:hover::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:url("../images/class_hov_bg.png") repeat 0 0;
+    background-size: 100% 100%;
+    transition: width 0.5s;
+    
+}
+.vr-courses-list li:hover .vr-courses-item{
+    color:#ffffff;
+    background: url("../images/icon_class_pre.png") no-repeat 28px 3px;
+}
+/* 选中的课程 */
+.vr-courses-list li.course-on{
+    color:#eff1f1;
+    background:#4f5f79;
+}
+.vr-courses-list li.course-on .vr-courses-item{
+    color:#eff1f1;
+    background: url("../images/icon_class_pre.png") no-repeat 28px 3px;
+}
+.vr-courses-list li.course-on::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:4px;
+    height:100%;
+    background:url("../images/course_pre.png") repeat 0 0;
+    background-size: 100% 100%;
+    transition: width 0.5s;
+}
+/* 主内容区 */
+.l-content{
+    background: #edf2f6;
+    height:100%;
+    margin-left:265px;
+}
+
+/* 顶部：用户和设备选择 */
+.l-top{
+    height:64px;
+    background:#ffffff;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+/* 作品分类、提交、新建 */
+.l-main__hd{
+    height:49px;
+    background:#fafbfd;
+    border-bottom:solid 1px #e2e2e2;
+}
+
+.l-main__bd{
+    position:relative;
+}
+/* 搜索 */
+.vr-search{
+    position: absolute;
+    top:22px;
+    right:126px;
+    display:inline-block;
+}
