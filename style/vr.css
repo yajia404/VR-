@@ -97,6 +97,90 @@ html,body,.wrapper{
     background:#ffffff;
     border-bottom: solid 1px #e2e2e2;
 }
+/* 用户信息 */
+.user-info{
+    position: relative;
+    margin-top:20px;
+    margin-left:36px;
+    display: inline-block;
+}
+.user-info__item{
+    position: relative; 
+    display:inline-block;
+    padding:0 16px;
+    margin:0;
+}
+.user-info__item::before{
+    content:"";
+    position: absolute;
+    top:-2px;
+    bottom:-2px;
+    width:1px;
+    background:#edf2f6;
+    left:0;
+}
+.user-info__item:first-child::before{
+    display:none;
+}
+.user-info__item .vr-icon{
+    display:inline-block;
+    width:22px;
+    height:22px;
+    vertical-align: middle;
+}
+.vr-icon{
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.vr-icon__user{
+    background-image: url("../images/icon_user.png");
+}
+.vr-icon__id{
+    background-image: url("../images/icon_id.png");
+}
+.vr-icon__txt{
+    font-size: 14px;
+    color:#a0a0a0;
+    vertical-align: middle;
+}
+/* 设备选择 */
+.vr-extend{
+    /* position: relative; */
+    /* display: inline-block; */
+    /* inline-block is ignored due to the float. 
+    If 'float' has a value other than 'none',
+     the box is floated and 'display' is treated as 'block' */
+    float: right;
+    margin-top:16px;
+    margin-right: 54px;
+}
+.vr-extend select{
+    height:34px;
+    width:102px;
+    line-height: 34px;
+    color:#16a4fa;
+    font-size: 16px; 
+    border:1px solid #16a4fa;
+    padding-left: 14px;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.vr-extend::after{
+    content:"";
+    width:10px;
+    height:7px;
+    position:absolute;
+    top:30px;
+    right:60px;
+    background:url("../images/select_icon.png") no-repeat 50% 50%;
+}
+.vr-extend select:hover{
+    color:#30b8ff;
+    cursor: pointer;
+}
+/* 点击下拉框效果 留待 */
 
 /* 作品分类、提交、新建 */
 .l-main__hd{
@@ -104,7 +188,6 @@ html,body,.wrapper{
     background:#fafbfd;
     border-bottom:solid 1px #e2e2e2;
 }
-
 .l-main__bd{
     position:relative;
 }
