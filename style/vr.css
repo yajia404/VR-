@@ -103,6 +103,7 @@ html,body,.wrapper{
     margin-top:20px;
     margin-left:36px;
     display: inline-block;
+    /* font-size: 0; */
 }
 .user-info__item{
     position: relative; 
@@ -180,13 +181,82 @@ html,body,.wrapper{
     color:#30b8ff;
     cursor: pointer;
 }
-/* 点击下拉框效果 留待 */
-
+.vr-extend select:active{
+    color:#1b92da;
+}
 /* 作品分类、提交、新建 */
 .l-main__hd{
     height:49px;
     background:#fafbfd;
     border-bottom:solid 1px #e2e2e2;
+    display: inline-block;
+    width:100%;
+}
+/* 作品类别 */
+.vr-tab{
+    position: relative;
+    height:49px;
+    display: inline-block;
+    font-size: 0;
+}
+.vr-tab li{
+    position: relative;
+    display:inline-block;
+    color:#4d5b67;
+    font-size: 18px;
+    padding:18px 40px 12px 35px;
+    margin:0 19px;
+}
+.vr-tab li::before{
+    content:"";
+    position: absolute;
+    top:-2px;
+    bottom:-2px;
+    width:1px;
+    background:#f0f4f8;
+    left:-19px;
+}
+.vr-tab li:first-child::before{
+    display: none;
+}
+.vr-tab .tab-on{
+    border-bottom:1px solid #16a4fa;
+}
+.vr-btns-group{
+    position: relative;
+    float:right;
+    margin-top:8px;
+    margin-right: 54px;
+    font-size:0;
+}
+.vr-btns-group .vr-btn{
+    width:120px;
+    height:34px;
+    border:none;
+    color:#ffffff;
+    font-size:16px;
+    margin-left:20px;
+    padding-left:22px;
+    background:url("../images/btn_group.png") no-repeat 50% 50%;
+}
+.vr-btns-group .vr-btn:hover{
+    cursor: pointer;
+}
+.vr-btns-group .vr-btn-submit::before{
+    content: "";
+    position: absolute;
+    width:20px;
+    height:20px;
+    background: url("../images/btn_submit.png") no-repeat 50% 50%;
+    left:28px;
+}
+.vr-btns-group .vr-btn-new::before{
+    content: "";
+    position: absolute;
+    width:20px;
+    height:20px;
+    background: url("../images/btn_new.png") no-repeat 50% 50%;
+    left:168px;
 }
 .l-main__bd{
     position:relative;
@@ -197,4 +267,134 @@ html,body,.wrapper{
     top:22px;
     right:126px;
     display:inline-block;
+    font-size: 0;
+}
+.vr-search .vr-search__input{
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+.vr-search__input input{
+    width:298px;
+    height:32px;
+    font-size: 18px;
+    border:1px solid #e2e2e2;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+.vr-search__input input::-webkit-input-placeholder{
+    color:#dadada;
+    font-size:15px;
+}
+.vr-search__input .vr-icon{
+    position: absolute;
+    width:18px;
+    height:18px;
+    top:8px;
+    right: 8px;
+    background: url("../images/icon_search.png");
+}
+.vr-search .vr-search__btn{
+    width:76px;
+    height:34px;
+    border:none;
+    color:#ffffff;
+    font-size: 16px;
+    background: url("../images/btn_search_nor.png") no-repeat 50% 50%;
+}
+.vr-search .vr-search__btn:hover{
+    cursor: pointer;
+    background: url("../images/btn_search_hov.png") no-repeat 50% 50%;
+}
+.vr-search .vr-search__btn:active{
+    background: url("../images/btn_search_pre.png") no-repeat 50% 50%;
+}
+/* 内容展示 */
+
+.vr-card-list{
+    padding-left:35px;
+    padding-top:80px;
+}
+.vr-card-list li{
+    width:356px;
+    height:298px;
+    /*  */
+    background: #16a4fa;
+    margin-right:44px;
+    margin-bottom:44px;
+    display: block;
+    float:left;
+    font-size: 0;
+}
+.vr-card-item .vr-card-box{
+    width:358px;
+    height:270px;
+    background-color:#fafbfd;
+    margin-bottom:14px;
+}
+.vr-card-item__bd{
+    width:358px;
+    height:214px;
+}
+.vr-card-item__btns .vr-card-btn{
+    border:none;
+    outline: none;
+    margin-left:52px;
+    margin-right:15px;
+    width:40px;
+    height:56px;
+    font-size:0;
+}
+.vr-icon__edit{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    background:url("../images/btn_edit_nor.png") no-repeat 50% 50%;
+}
+.vr-icon__play{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    background:url("../images/btn_play_nor.png") no-repeat 50% 50%;
+}
+.vr-icon__delete{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    background:url("../images/btn_delete_nor.png") no-repeat 50% 50%;
+}
+.vr-btn__text{
+    display: inline-block;
+    font-size: 14px;
+    color:#333333;
+}
+.vr-card-item .vr-card-item__ft{
+    font-size: 16px;
+    text-align: center;
+    color:#4d5b67;
+}
+.l-main__ft{
+    clear: both;
+}
+.l-main__ft .vr-page{
+    text-align: center;
+    padding-top:40px; 
+}
+.vr-page__item{
+    display: inline-block;
+    font-size: 16px;
+    color:#4d5b67;
+    background:url("../images/btn_page_nor.png");
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    margin-right:16px;
+}
+.vr-page__item:hover{
+    color:#ffffff;
+    background:url("../images/btn_page_hov.png");
+}
+.vr-page .current-page{
+    color:#ffffff;
+    background:url("../images/btn_page_pre.png");
 }
