@@ -318,8 +318,6 @@ html,body,.wrapper{
 .vr-card-list li{
     width:356px;
     height:298px;
-    /*  */
-    background: #16a4fa;
     margin-right:44px;
     margin-bottom:44px;
     display: block;
@@ -332,10 +330,52 @@ html,body,.wrapper{
     background-color:#fafbfd;
     margin-bottom:14px;
 }
+/* 作品信息 */
 .vr-card-item__bd{
     width:358px;
     height:214px;
 }
+.vr-card-item__info{
+    position: relative;
+    margin-top:-34px;
+    width:358px;
+    height:34px;
+    background-color:rgba(102, 102, 102, 0.4);
+    font-size: 0;
+}
+.vr-card-item-icon{
+    display: inline-block;
+    width:21px;
+    height:21px;
+    background: url("../images/icon_author.png") no-repeat 50% 50%;
+    position: absolute;
+    top:6px;
+    left:18px;
+}
+.vr-card-item__name{
+    display: inline-block;
+    position: absolute;
+    width:152px;
+    height:34px;
+    line-height: 34px;
+    left:48px;
+    font-size:14px;
+    color:#eff1f1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.vr-card-item__data{
+    display: inline-block;
+    position: absolute;
+    width:118px;
+    height:34px;
+    line-height: 34px;
+    right:18px;
+    font-size:14px;
+    color:#eff1f1;
+}
+/* 编辑、播放、删除按钮 */
 .vr-card-item__btns .vr-card-btn{
     border:none;
     outline: none;
@@ -344,24 +384,40 @@ html,body,.wrapper{
     width:40px;
     height:56px;
     font-size:0;
+    background:transparent;
 }
 .vr-icon__edit{
     display: inline-block;
     width:22px;
     height:22px;
+    margin:5px 0;
     background:url("../images/btn_edit_nor.png") no-repeat 50% 50%;
 }
 .vr-icon__play{
     display: inline-block;
     width:22px;
     height:22px;
+    margin:5px 0;
     background:url("../images/btn_play_nor.png") no-repeat 50% 50%;
 }
 .vr-icon__delete{
     display: inline-block;
     width:22px;
+    margin:5px 0;
     height:22px;
     background:url("../images/btn_delete_nor.png") no-repeat 50% 50%;
+}
+.vr-icon__edit:hover,.vr-icon__edit:active{
+    cursor: pointer;
+    background:url("../images/btn_edit_active.png") no-repeat 50% 50%;
+}
+.vr-icon__play:hover,.vr-icon__play:active{
+    cursor: pointer;
+    background:url("../images/btn_play_active.png") no-repeat 50% 50%;
+}
+.vr-icon__delete:hover,.vr-icon__delete:active{
+    cursor: pointer;
+    background:url("../images/btn_delete_active.png") no-repeat 50% 50%;
 }
 .vr-btn__text{
     display: inline-block;
